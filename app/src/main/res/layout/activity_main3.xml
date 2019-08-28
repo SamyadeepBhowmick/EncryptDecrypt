@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="360dp"
-        android:layout_height="191dp"
+        android:layout_height="206dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
