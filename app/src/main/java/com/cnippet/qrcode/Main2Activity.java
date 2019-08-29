@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
@@ -53,22 +55,33 @@ public class Main2Activity extends AppCompatActivity {
     public void generate(View view) {
         text2Qr=editText.getText().toString();
 
-        MultiFormatWriter writer=new MultiFormatWriter();
-        //QRCodeWriter writer = new QRCodeWriter();
-        try {
-            BitMatrix bitMatrix = writer.encode(text2Qr, BarcodeFormat.valueOf(code), 516, 516);
-            int width = bitMatrix.getWidth();
-            int height = bitMatrix.getHeight();
-            Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
-            for (int x = 0; x < width; x++) {
-                for (int y = 0; y < height; y++) {
-                    bmp.setPixel(x, y, bitMatrix.get(x, y) ? Color.BLACK : Color.WHITE);
-                }
-            }
-            ((ImageView) findViewById(R.id.imageView)).setImageBitmap(bmp);
+        if (text2Qr.length()==0) {
 
-        } catch (WriterException e) {
-            e.printStackTrace();
+            Toast.makeText(Main2Activity.this,"Enter code in text field",Toast.LENGTH_LONG).show();
+
+
+
+        }
+        else
+        {
+            MultiFormatWriter writer = new MultiFormatWriter();
+            //QRCodeWriter writer = new QRCodeWriter();
+            try {
+                BitMatrix bitMatrix = writer.encode(text2Qr, BarcodeFormat.valueOf(code), 516, 516);
+                int width = bitMatrix.getWidth();
+                int height = bitMatrix.getHeight();
+                Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
+                for (int x = 0; x < width; x++) {
+                    for (int y = 0; y < height; y++) {
+                        bmp.setPixel(x, y, bitMatrix.get(x, y) ? Color.BLACK : Color.WHITE);
+                    }
+                }
+                ((ImageView) findViewById(R.id.imageView)).setImageBitmap(bmp);
+
+            } catch (WriterException e) {
+                e.printStackTrace();
+            }
+
         }
 
     }

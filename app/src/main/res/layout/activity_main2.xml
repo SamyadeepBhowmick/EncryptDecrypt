@@ -4,45 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f1e0e5"
     tools:context=".Main2Activity">
 
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="360dp"
-        android:layout_height="50dp"
+        android:layout_width="340dp"
+        android:layout_height="120dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
+        android:background="#ffffffff"
         android:textSize="20dp"
         android:hint="Enter text to encrypt"
         android:textAlignment="center"
         android:textColor="@android:color/black" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
-        android:onClick="generate"
-        android:text="encrypt" />
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="320dp"
-        android:layout_height="320dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginBottom="100dp"
+        android:background="#ffffff" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="135dp" />
+        android:layout_marginBottom="410dp"
+        android:popupBackground="#f1e0e5"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/roundbutton"
+        android:textColor="#FFFFFF"
+        android:onClick="generate"
+        android:text="generate"
+        />
 
 </RelativeLayout>
