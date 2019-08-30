@@ -77,9 +77,11 @@ public class Main2Activity extends AppCompatActivity {
                     }
                 }
                 ((ImageView) findViewById(R.id.imageView)).setImageBitmap(bmp);
+                editText.getText().clear();
 
             } catch (WriterException e) {
                 e.printStackTrace();
+
             }
 
         }

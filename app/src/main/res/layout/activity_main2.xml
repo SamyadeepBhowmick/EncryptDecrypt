@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:background="#ffffffff"
+        android:background="@drawable/roundtext"
         android:textSize="20dp"
         android:hint="Enter text to encrypt"
         android:textAlignment="center"
@@ -28,7 +28,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="100dp"
-        android:background="#ffffff" />
+        android:background="@drawable/roundtext" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -48,9 +48,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="25dp"
         android:background="@drawable/roundbutton"
-        android:textColor="#FFFFFF"
         android:onClick="generate"
         android:text="generate"
-        />
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>
