@@ -1,36 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f1e0e5"
+    android:id="@+id/dlayout"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/generator"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="25dp"
-        android:layout_marginEnd="25dp"
-        android:background="@drawable/roundbutton"
-        android:textColor="#FFFFFF"
-        android:onClick="generator"
-        android:text="code generator" />
 
-    <Button
-        android:id="@+id/scanner"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/generator"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/roundbutton"
-        android:textColor="#FFFFFF"
-        android:onClick="scanner"
-        android:text="code scanner" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f1e0e5"
+        >
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/generator"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/roundbutton"
+            android:textColor="#FFFFFF"
+            android:onClick="generator"
+            android:text="code generator" />
+
+        <Button
+            android:id="@+id/scanner"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/generator"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/roundbutton"
+            android:textColor="#FFFFFF"
+            android:onClick="scanner"
+            android:text="code scanner" />
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/drawer_menu"
+        android:id="@+id/navigationview"
+        android:background="#f1e0e5"
+        android:layout_gravity="start">
+
+
+    </android.support.design.widget.NavigationView>
+
+
+
+</android.support.v4.widget.DrawerLayout>
