@@ -25,7 +25,7 @@ public class Main2Activity extends AppCompatActivity {
     Button button;
     String text2Qr,code;
     Spinner spinner;
-    String[] codes={"Select Code","QR_CODE","AZTEC","CODABAR","CODE_39","CODE_93","CODE_128","DATA_MATRIX","EAN_8","EAN_13","ITF","MAXICODE","PDF_417","RSS_14","RSS_EXPANDED","UPC_A","UPC_E","UPC_EAN_EXTENSION"};
+    String[] codes={"Select Code","QR_CODE","AZTEC","MAXICODE","PDF_417","DATA_MATRIX","CODABAR","CODE_39","CODE_93","CODE_128","EAN_8","EAN_13","ITF","RSS_14","RSS_EXPANDED","UPC_A","UPC_E","UPC_EAN_EXTENSION"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

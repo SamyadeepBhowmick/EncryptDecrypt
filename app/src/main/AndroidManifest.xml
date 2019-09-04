@@ -34,8 +34,18 @@
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="barcode" />
 
-        <activity android:name=".Main4Activity" />
-        <activity android:name=".Main5Activity"></activity>
+        <activity
+            android:name=".Main4Activity"
+            android:label="About"
+            android:screenOrientation="portrait" />
+
+        />
+        <activity
+            android:name=".Main5Activity"
+            android:label="Guidelines"
+            android:screenOrientation="portrait">
+
+        </activity>
     </application>
 
 </manifest>
